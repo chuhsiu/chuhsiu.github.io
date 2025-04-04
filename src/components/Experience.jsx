@@ -1,5 +1,4 @@
 import SectionTitle from "./SectionTitle";
-import "../animation.css";
 function Experience() {
   return (
     <>
@@ -7,7 +6,7 @@ function Experience() {
         <SectionTitle title="Experience" />
         <ul className="m-8">
           <li className="group relative pl-7 pb-8 last:pb-0">
-            <div className="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-black/10 group-first:top-2 duration-500 group-hover:animate-colorChange"></div>
+            <div className="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-black/10 group-first:top-2 duration-500"></div>
             <div className="absolute left-0 top-2 h-2 w-2 rounded-full border border-sky-200 bg-zinc-500"></div>
             <div>
               <h2 className="tracking-[1.5px] mb-2">
