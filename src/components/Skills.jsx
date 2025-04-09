@@ -48,7 +48,7 @@ function Skills() {
                     {
                       type.detail.find(
                         (type_detail) => type_detail.lang === i18n.language
-                      ).content
+                      )?.content
                     }
                   </h2>
                   {type.lists.length === 0 ? (

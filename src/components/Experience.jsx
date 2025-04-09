@@ -41,7 +41,7 @@ function Experience() {
                         experience.detail.find(
                           (item) =>
                             item.lang == i18n.language && item.type == "title"
-                        ).content
+                        )?.content
                       }
                     </span>{" "}
                     /{" "}
@@ -49,7 +49,7 @@ function Experience() {
                       experience.detail.find(
                         (item) =>
                           item.lang == i18n.language && item.type == "company"
-                      ).content
+                      )?.content
                     }
                   </h2>
                   {experience.detail
@@ -57,7 +57,7 @@ function Experience() {
                       (item) =>
                         item.lang === i18n.language && item.type === "content"
                     )
-                    .content.map((text, index) => (
+                    ?.content.map((text, index) => (
                       <p key={index} className="text-[15px] text-[15px]/7">
                         {text}
                       </p>
