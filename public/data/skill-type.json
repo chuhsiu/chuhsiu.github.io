@@ -1,0 +1,97 @@
+[
+    {
+        "id" : 1,
+        "detail" : [
+            {
+                "id" : 1,
+                "reference_id" : 1,
+                "type" : "name",
+                "content" : "Front-End",
+                "lang" : "en"
+            },
+            {
+                "id" : 2,
+                "reference_id" : 1,
+                "type" : "name",
+                "content" : "前端技術",
+                "lang" : "zh"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "detail" : [
+            {
+                "id" : 3,
+                "reference_id" : 2,
+                "type" : "name",
+                "content" : "Back-End",
+                "lang" : "en"
+            },
+            {
+                "id" : 4,
+                "reference_id" : 2,
+                "type" : "name",
+                "content" : "後端技術",
+                "lang" : "zh"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "detail" : [
+            {
+                "id" : 5,
+                "reference_id" : 3,
+                "type" : "name",
+                "content" : "Database",
+                "lang" : "en"
+            },
+            {
+                "id" : 6,
+                "reference_id" : 3,
+                "type" : "name",
+                "content" : "資料庫技術",
+                "lang" : "zh"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "detail" : [
+            {
+                "id" : 7,
+                "reference_id" : 4,
+                "type" : "name",
+                "content" : "Development Tools",
+                "lang" : "en"
+            },
+            {
+                "id" : 8,
+                "reference_id" : 4,
+                "type" : "name",
+                "content" : "開發工具",
+                "lang" : "zh"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "detail" : [
+            {
+                "id" : 9,
+                "reference_id" : 5,
+                "type" : "name",
+                "content" : "Test & Debug",
+                "lang" : "en"
+            },
+            {
+                "id" : 10,
+                "reference_id" : 5,
+                "type" : "name",
+                "content" : "測試與除錯",
+                "lang" : "zh"
+            }
+        ]
+    }
+]

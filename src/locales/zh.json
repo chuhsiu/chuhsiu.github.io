@@ -1,0 +1,17 @@
+{
+    "section" :{
+        "about" : "關於我",
+        "experience" : "經驗",
+        "education" : "教育",
+        "skill" : "技能",
+        "project" : "專案與作品"
+    },
+     "bachelor" :{
+        "school" : "國立中山大學",
+        "major" : "資訊管理學系"
+    },
+    "master" :{
+        "school" : "國立中山大學",
+        "major" : "資訊管理學系, 金融服務與金融科技微學程"
+    }
+}

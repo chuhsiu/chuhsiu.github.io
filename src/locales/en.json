@@ -1,0 +1,17 @@
+{
+    "section" :{
+        "about" : "About",
+        "experience" : "Experience",
+        "education" : "Education",
+        "skill" : "Skill",
+        "project" : "Project"
+    },
+    "bachelor" :{
+        "school" : "National Sun Yat-sen University",
+        "major" : "Bachelor of Information Management"
+    },
+    "master" :{
+        "school" : "National Sun Yat-sen University",
+        "major" : "Master of Science in Information Systems, Financial Services and Fintech Micro-credentials"
+    }
+}

@@ -5,7 +5,10 @@ import { FaLinkedin } from "react-icons/fa";
 function About() {
   return (
     <>
-      <div className="bg-[url(src/assets/bg.jpg)] bg-cover py-[20px] h-fit">
+      <div
+        id="About"
+        className="bg-[url(src/assets/bg.jpg)] bg-cover py-[20px] h-fit"
+      >
         <div className="relative group bg-white/30 backdrop-blur-sm p-10 md:max-w-3/5 md:w-fit w-full max-w-90 m-auto rounded-md shadow-md hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-400 ease-in-out">
           <div className="block mx-auto rounded-full h-[120px] w-[120px] overflow-hidden duration-300 ease-in-out group-hover:scale-105">
             <img
