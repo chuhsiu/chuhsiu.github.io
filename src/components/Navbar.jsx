@@ -31,6 +31,19 @@ function Navbar() {
     }
   };
 
+  const scrollToSection = function (id) {
+    if (id == null) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
+    const target = document.getElementById(id);
+    window.scrollTo({
+      top: target.offsetTop - 70,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 640px)");
 
@@ -61,19 +74,29 @@ function Navbar() {
       <header className="sticky top-0 flex flex-row justify-center py-[20px] shadow-md bg-white text-gray tracking-[1px] font-thin text-sm z-4 w-full">
         <nav className="flex w-full justify-between sm:justify-center items-center">
           <div className="mx-4 hidden sm:block">
-            <a href="#About">{t("section.about").toUpperCase()}</a>
+            <a onClick={() => scrollToSection()}>
+              {t("section.about").toUpperCase()}
+            </a>
           </div>
           <div className="mx-4 hidden sm:block">
-            <a href="#Experience">{t("section.experience").toUpperCase()}</a>
+            <a onClick={() => scrollToSection("Experience")}>
+              {t("section.experience").toUpperCase()}
+            </a>
           </div>
           <div className="mx-4 hidden sm:block">
-            <a href="#Skill">{t("section.skill").toUpperCase()}</a>
+            <a onClick={() => scrollToSection("Skill")}>
+              {t("section.skill").toUpperCase()}
+            </a>
           </div>
           <div className="mx-4 hidden sm:block">
-            <a href="#Education">{t("section.education").toUpperCase()}</a>
+            <a onClick={() => scrollToSection("Education")}>
+              {t("section.education").toUpperCase()}
+            </a>
           </div>
           <div className="mx-4 hidden sm:block">
-            <a href="#Project">{t("section.project").toUpperCase()}</a>
+            <a onClick={() => scrollToSection("Experience")}>
+              {t("section.project").toUpperCase()}
+            </a>
           </div>
           <div className="text-xs p-2 rounded-md border-[0.5px] ml-5 sm:ml-0">
             {/* <GrLanguage /> */}
@@ -104,37 +127,41 @@ function Navbar() {
       >
         <a
           className="p-4 hover:bg-gray-200 duration-300"
-          href="#About"
-          onClick={clickMenu}
+          onClick={(e) => {
+            scrollToSection();
+            clickMenu(e);
+          }}
         >
           {t("section.about").toUpperCase()}
         </a>
         <a
           className="p-4 hover:bg-gray-200 duration-300"
-          href="#Skill"
-          onClick={clickMenu}
+          onClick={(e) => {
+            scrollToSection("Skill");
+            clickMenu(e);
+          }}
         >
           {t("section.skill").toUpperCase()}
         </a>
         <a
           className="p-4 hover:bg-gray-200 duration-300"
-          href="#Experience"
-          onClick={clickMenu}
+          onClick={(e) => {
+            scrollToSection("Experience");
+            clickMenu(e);
+          }}
         >
           {t("section.experience").toUpperCase()}
         </a>
         <a
           className="p-4 hover:bg-gray-200 duration-300"
-          href="#Education"
-          onClick={clickMenu}
+          onClick={(e) => {
+            scrollToSection("Education");
+            clickMenu(e);
+          }}
         >
           {t("section.education").toUpperCase()}
         </a>
-        <a
-          className="p-4 hover:bg-gray-200 duration-300"
-          href="#Project"
-          onClick={clickMenu}
-        >
+        <a className="p-4 hover:bg-gray-200 duration-300" onClick={clickMenu}>
           {t("section.project").toUpperCase()}
         </a>
       </div>
