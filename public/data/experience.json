@@ -1,98 +1,61 @@
 [{
     "id": 1,
-    "orderBy" : 1,
-    "startDate" : "2023-01",
-    "endDate" : "2025-03",
-    "detail" : [
-        {
-            "id" : 1,
-            "reference_id" : 1,
-            "type" : "title",
-            "content" : "Software Engineer",
-            "lang" : "en"
-        },
-        {
-            "id" : 2,
-            "reference_id" : 1,
-            "type" : "title",
-            "content" : "軟體工程師",
-            "lang" : "zh"
-        },
-        {
-            "id" : 3,
-            "reference_id" : 1,
-            "type" : "company",
-            "content" : "PEGATRON",
-            "lang" : "en"
-        },
-        {
-            "id" : 4,
-            "reference_id" : 1,
-            "type" : "company",
-            "content" : "和碩聯合科技",
-            "lang" : "zh"
-        },{
-            "id" : 5,
-            "reference_id" : 1,
-            "type" : "content",
-            "content" : ["1. 擅長 Vue 開發並有維護 ASP.NET MVC 、Blazor 網站經驗","2. 具備獨立開發能力，重構舊有後台系統資料庫並實現階段性上線，確保系統順利過渡並提升效能","3. PowerShell 與 Task Scheduler 開發自動化工具，優化工作流程","4. 跨部門協作，規劃專案進度並按時交付","5. 成功將企業內部數百份表單導入響應式設計，提升維護效率與跨裝置體驗"],
-            "lang" : "en"
-        },
-        {
-            "id" : 6,
-            "reference_id" : 1,
-            "type" : "content",
-            "content" : ["1. 擅長 Vue 開發並有維護 ASP.NET MVC 、Blazor 網站經驗","2. 具備獨立開發能力，重構舊有後台系統資料庫並實現階段性上線，確保系統順利過渡並提升效能","3. PowerShell 與 Task Scheduler 開發自動化工具，優化工作流程","4. 跨部門協作，規劃專案進度並按時交付","5. 成功將企業內部數百份表單導入響應式設計，提升維護效率與跨裝置體驗"],
-            "lang" : "zh"
-        }
-    ] 
-},{
+    "sortOrder": 1,
+    "startDate": "2023-01",
+    "endDate": "2025-03",
+    "translations": {
+      "en": {
+        "title": "Software Engineer",
+        "company": "PEGATRON",
+        "content": [
+          "1.&emsp;Skilled in Vue development with experience maintaining ASP.NET MVC and Blazor sites.",
+          "2.&emsp;Independently refactored a legacy backend system with phased deployments to improve performance.",
+          "3.&emsp;Developed automation tools using PowerShell and Task Scheduler to optimize workflows.",
+          "4.&emsp;Collaborated cross-functionally to plan and deliver projects on time.",
+          "5.&emsp;Migrated hundreds of internal forms to responsive design, improving cross-device user experience."
+        ]
+      },
+      "zh": {
+        "title": "軟體工程師",
+        "company": "和碩聯合科技",
+        "content": [
+          "1.&emsp;**擅長 Vue 開發**並有維護 ASP.NET MVC 、Blazor 網站經驗",
+          "2.&emsp;具備獨立開發能力，重構舊有後台系統資料庫並實現階段性上線，確保系統順利過渡並提升效能",
+          "3.&emsp;PowerShell 與 Task Scheduler 開發自動化工具，優化工作流程",
+          "4.&emsp;跨部門協作，規劃專案進度並按時交付",
+          "5.&emsp;成功將企業內部數百份表單導入響應式設計，提升維護效率與跨裝置體驗"
+        ]
+      }
+    }
+  },
+  {
     "id": 2,
-    "orderBy" : 2,
-    "startDate" : "2020-07",
-    "endDate" : "2022-09",
-    "detail" : [
-        {
-            "id" : 7,
-            "reference_id" : 2,
-            "type" : "title",
-            "content" : "Research Assistant",
-            "lang" : "en"
-        },
-        {
-            "id" : 8,
-            "reference_id" : 2,
-            "type" : "title",
-            "content" : "研究助理",
-            "lang" : "zh"
-        },
-        {
-            "id" : 9,
-            "reference_id" : 2,
-            "type" : "company",
-            "content" : "Metal Industries Research & Development Centre",
-            "lang" : "en"
-        },
-        {
-            "id" : 10,
-            "reference_id" : 2,
-            "type" : "company",
-            "content" : "金屬中心",
-            "lang" : "zh"
-        },{
-            "id" : 11,
-            "reference_id" : 2,
-            "type" : "content",
-            "content" : ["1. Python 抓取國外新聞來源網站","2. ShinyApp 製作互動式圖表，包含敘述性分析、趨勢圖、馬賽克圖與社群網路圖","3. 規劃 Python flask 框架網站，使用 MongoDB 儲存資料庫，並將 Excel、PDF 檔案轉為數據資料","4. 有 Git 協作經驗","5. 撰寫年度分析報告、提供產業建議"],
-            "lang" : "en"
-        },
-        {
-            "id" : 12,
-            "reference_id" : 2,
-            "type" : "content",
-            "content" : ["1. Python 抓取國外新聞來源網站","2. ShinyApp 製作互動式圖表，包含敘述性分析、趨勢圖、馬賽克圖與社群網路圖","3. 規劃 Python flask 框架網站，使用 MongoDB 儲存資料庫，並將 Excel、PDF 檔案轉為數據資料","4. 有 Git 協作經驗","5. 撰寫年度分析報告、提供產業建議"],
-            "lang" : "zh"
-        }
-    ]
-}
+    "sortOrder": 2,
+    "startDate": "2023-01",
+    "endDate": "2025-03",
+    "translations": {
+      "en": {
+        "title": "Research Assistant",
+        "company": "Metal Industries Research & Development Centre",
+        "content": [
+            "1.&emsp;Python to scrape foreign news source websites.",
+            "2.&emsp;ShinyApp to create interactive charts, including descriptive analysis, trend graphs, mosaic plots, and social network graphs.",
+            "3.&emsp;Plan a Python Flask framework website, using MongoDB to store data, and convert Excel and PDF files into data.",
+            "4.&emsp;Experience with Git collaboration.",
+            "5.&emsp;Write annual analysis reports and provide industry recommendations."
+        ]
+      },
+      "zh": {
+        "title": "研究助理",
+        "company": "金屬中心",
+        "content": [
+            "1.&emsp;Python 抓取國外新聞來源網站",
+            "2.&emsp;ShinyApp 製作互動式圖表，包含敘述性分析、趨勢圖、馬賽克圖與社群網路圖",
+            "3.&emsp;規劃 Python flask 框架網站，使用 MongoDB 儲存資料庫，並將 Excel、PDF 檔案轉為數據資料",
+            "4.&emsp;有 Git 協作經驗",
+            "5.&emsp;撰寫年度分析報告、提供產業建議"
+        ]
+      }
+    }
+  }
 ]
