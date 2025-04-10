@@ -1,113 +1,69 @@
 [
   {
     "id": 1,
-    "name": "HTML",
-    "type": 1
+    "name": {
+      "en": "Front-End",
+      "zh": "前端技術"
+    },
+    "skills": [
+      { "id": 1, "name": "HTML" },
+      { "id": 2, "name": "CSS" },
+      { "id": 3, "name": "JavaScript ES6" },
+      { "id": 4, "name": "Bootstrap" },
+      { "id": 5, "name": "Vue 2/3" },
+      { "id": 6, "name": "Vuetify" },
+      { "id": 7, "name": "React" },
+      { "id": 8, "name": "Tailwind CSS" }
+    ]
   },
   {
     "id": 2,
-    "name": "CSS",
-    "type": 1
+    "name": {
+      "en": "Back-End",
+      "zh": "後端技術"
+    },
+    "skills": [
+      { "id": 9, "name": "RESTful API" },
+      { "id": 10, "name": ".NET Core (5)" },
+      { "id": 11, "name": "ASP .NET MVC" }
+    ]
   },
   {
     "id": 3,
-    "name": "JavaScript ES6",
-    "type": 1
+    "name": {
+      "en": "Database",
+      "zh": "資料庫技術"
+    },
+    "skills": [
+      { "id": 12, "name": "MySQL" },
+      { "id": 13, "name": "Microsoft SQL Server" },
+      { "id": 14, "name": "Oracle" },
+      { "id": 15, "name": "MongoDB" }
+    ]
   },
   {
     "id": 4,
-    "name": "Bootstrap",
-    "type": 1
+    "name": {
+      "en": "Development Tools",
+      "zh": "開發工具"
+    },
+    "skills": [
+      { "id": 16, "name": "Visual Studio 2019" },
+      { "id": 17, "name": "VS Code" },
+      { "id": 18, "name": "Git/TortoiseGit" },
+      { "id": 19, "name": "Chrome DevTools" }
+    ]
   },
   {
     "id": 5,
-    "name": "Vue 2/3",
-    "type": 1
-  },
-  {
-    "id": 6,
-    "name": "Vuetify",
-    "type": 1
-  },
-  {
-    "id": 7,
-    "name": "React",
-    "type": 1
-  },
-  {
-    "id": 8,
-    "name": "RESTful API",
-    "type": 2
-  },
-  {
-    "id": 9,
-    "name": ".NET Core (5)",
-    "type": 2
-  },
-  {
-    "id": 10,
-    "name": "ASP .NET MVC",
-    "type": 2
-  },
-  {
-    "id": 13,
-    "name": "MySQL",
-    "type": 3
-  },
-  {
-    "id": 14,
-    "name": "Microsoft SQL Server",
-    "type": 3
-  },
-  {
-    "id": 15,
-    "name": "Oracle",
-    "type": 3
-  },
-  {
-    "id": 16,
-    "name": "Visual Studio 2019",
-    "type": 4
-  },
-  {
-    "id": 17,
-    "name": "VS Code",
-    "type": 4
-  },
-  {
-    "id": 18,
-    "name": "Git/TortoiseGit",
-    "type": 4
-  },
-  {
-    "id": 19,
-    "name": "Chrome DevTools",
-    "type": 4
-  },
-  {
-    "id": 20,
-    "name": "JMeter",
-    "type": 5
-  },
-  {
-    "id": 21,
-    "name": "Coverity",
-    "type": 5
-  },
-  {
-    "id": 22,
-    "name": "Postman",
-    "type": 5
-  },
-  {
-    "id": 23,
-    "name": "MongoDB",
-    "type": 3
-  },
-  {
-    "id": 24,
-    "name": "Tailwind CSS",
-    "type": 1
+    "name": {
+      "en": "Test & Debug",
+      "zh": "測試與除錯"
+    },
+    "skills": [
+      { "id": 20, "name": "JMeter" },
+      { "id": 21, "name": "Coverity" },
+      { "id": 22, "name": "Postman" }
+    ]
   }
-
 ]
