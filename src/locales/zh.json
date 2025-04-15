@@ -6,6 +6,15 @@
         "skill" : "技能",
         "project" : "專案與作品"
     },
+    "about":{
+        "name": "鄭竹秀 (Zoey Cheng)",
+        "title": "網頁開發",
+        "intro":[
+            "擁有超過 2 年的前端開發經驗，對 Vue 及其相關技術（如 Option API、Vuex、Vuetify）有深入了解，同時具備 ASP.NET MVC 和 Blazor 等後端開發經驗。",
+            "曾主導過跨部門協作專案，並能夠獨立完成專案並準時交付。",
+            "熱愛學習新技術，現在正在深入學習 React、Node.js 等前端技術，並期望成為一位能夠靈活選擇技術並精通工具的全方位開發者。"
+          ]
+    },
      "bachelor" :{
         "school" : "國立中山大學",
         "major" : "資訊管理學系"

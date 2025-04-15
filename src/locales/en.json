@@ -6,6 +6,15 @@
         "skill" : "Skill",
         "project" : "Project"
     },
+    "about":{
+        "name": "Zoey Cheng",
+        "title": "Web Developer",
+        "intro":[
+            "With over 2 years of experience as a front-end developer, I have a deep understanding of Vue.js and related technologies such as Option API, Vuex, and Vuetify, as well as back-end development experience with ASP.NET MVC and Blazor.",
+            "I have led cross-departmental projects and am capable of independently completing projects and delivering work on time.",
+            "I am passionate about learning new technologies and am currently expanding my knowledge in front-end technologies like React and Node.js, with the goal of becoming a versatile developer with the ability to choose technologies and master tools effectively."
+          ]
+    },
     "bachelor" :{
         "school" : "National Sun Yat-sen University",
         "major" : "Bachelor of Information Management"
