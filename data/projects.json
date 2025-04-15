@@ -8,17 +8,17 @@
       "en": {
         "name" : "PEGATRON",
         "content" : [
-          "前台：使用 Vue.js 開發，導入 Vuex 狀態管理、I18n 多語系管理",
-          "後台：提供管理員進行內容管理，使用 Vue.js、Vuetify 和 Vuex 處理狀態與界面，引入 TinyMCE 進行內容創建",
-          "後端：使用 .NET Core 開發 RESTful API，與前端進行數據交互並處理數據庫相關操作"
+          "**1.&emsp;Front-End:** Vue + Vuex + I18n",
+          "**2.&emsp;Back-End:** Vue + Vuex + Vuetify, Import TinyMCE plugin",
+          "**3.&emsp;Server:** Developed RESTful APIs using C# and .NET Core"
         ]
       } ,
       "zh": {
         "name" : "PEGATRON",
         "content" : [
-          "前台：使用 Vue.js 開發，導入 Vuex 狀態管理、I18n 多語系管理",
-          "後台：提供管理員進行內容管理，使用 Vue.js、Vuetify 和 Vuex 處理狀態與界面，引入 TinyMCE 進行內容創建",
-          "後端：使用 .NET Core 開發 RESTful API，與前端進行數據交互並處理數據庫相關操作"
+          "**1.&emsp;前台：** Vue + Vuex + I18n",
+          "**1.&emsp;後台：** Vue + Vuex + Vuetify，引用 TinyMCE 套件",
+          "**1.&emsp;後端：** C# .NET Core 開發 RESTful API"
         ]
       }
     }
@@ -31,11 +31,11 @@
     "translations": {
       "en": {
         "name" : "PEGATRON SVR",
-        "content" : ["將靜態 HTML 頁面轉換為 ASP.NET MVC 與 Razor 結合的動態頁面"]
+        "content" : ["ASP.NET MVC + Razor"]
       } ,
       "zh": {
         "name" : "PEGATRON SVR",
-        "content" : ["將靜態 HTML 頁面轉換為 ASP.NET MVC 與 Razor 結合的動態頁面"]
+        "content" : ["ASP.NET MVC + Razor"]
       }
     }
   },
@@ -48,15 +48,54 @@
       "en": {
         "name" : "Personal Website",
         "content" : [
-          "React + Tailwind css 開發個人網站",
-          "導入 I18n 與 React Context 管理全局狀態"
+          "React + Tailwind css "
         ]
       } ,
       "zh": {
         "name" : "個人網站",
         "content" : [
-          "React + Tailwind css 開發個人網站",
-          "導入 I18n 與 React Context 管理全局狀態"
+          "React + Tailwind css"
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "image": "/images/project/project4.png",
+    "code" : "https://github.com/chuhsiu/2018-referendum-analysis",
+    "link" : " https://zoeycheng.shinyapps.io/2018-referendum-01/",
+    "translations": {
+      "en": {
+        "name" : "2018 referendum : Scatterplot matrix",
+        "content" : [
+          "**Shiny App:**\n Used the ggpairs function from the GGally package to explore referendum outcomes and social characteristics across different groups (counties/cities)."
+        ]
+      } ,
+      "zh": {
+        "name" : "2018年公投 : 成對變數矩陣",
+        "content" : [
+          "**Shiny App:**\n 以 GGally 套件的 ggpairs 函數，觀察不同分群(縣市)下的公投狀況以及社會特性表現。"
+        ]
+      }
+    }
+  }
+  ,
+  {
+    "id": 5,
+    "image": "/images/project/project5.png",
+    "code" : "https://github.com/chuhsiu/2018-referendum-analysis",
+    "link" : " https://zoeycheng.shinyapps.io/2018-referendum-02/",
+    "translations": {
+      "en": {
+        "name" : "2018 referendum : PCA analysis",
+        "content" : [
+          "**Shiny App:**\n Integrated with GIS maps to select data points sharing similar dimensions under PCA and observe their geographical distribution."
+        ]
+      } ,
+      "zh": {
+        "name" : "2018年公投 : PCA 分析",
+        "content" : [
+          "**Shiny App:**\n 搭配GIS地圖，可以圈選PCA下相同維度的資料點，並觀察地理分佈。"
         ]
       }
     }
