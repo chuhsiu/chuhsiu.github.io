@@ -27,7 +27,7 @@ function Skills() {
           <ul className="mb-[40px] flex flex-wrap">
             {data.map((item) => (
               <li
-                className="w-full md:w-1/2 lg:w-1/3 mt-5 md:mx-0 mx-[20px] group relative"
+                className="w-full sm:w-1/2 lg:w-1/3 mt-5 sm:mx-0 mx-[20px] group relative"
                 key={item.id}
               >
                 {/* <div className="pt-[10px] relative mx-8 h-full before:top-[50px] before:left-0 before:w-full before:h-[1px] before:absolute before:bg-[#7284a1]"> */}

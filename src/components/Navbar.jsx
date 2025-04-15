@@ -73,28 +73,28 @@ function Navbar() {
     <>
       <header className="sticky top-0 flex flex-row justify-center py-[20px] shadow-md bg-white text-gray tracking-[1px] font-thin text-sm z-4 w-full">
         <nav className="flex w-full justify-between sm:justify-center items-center">
-          <div className="mx-4 hidden sm:block">
+          <div className="mx-4 hidden sm:block cursor-pointer">
             <a onClick={() => scrollToSection()}>
               {t("section.about").toUpperCase()}
             </a>
           </div>
-          <div className="mx-4 hidden sm:block">
+          <div className="mx-4 hidden sm:block cursor-pointer">
             <a onClick={() => scrollToSection("Experience")}>
               {t("section.experience").toUpperCase()}
             </a>
-          </div>
-          <div className="mx-4 hidden sm:block">
-            <a onClick={() => scrollToSection("Skill")}>
-              {t("section.skill").toUpperCase()}
-            </a>
-          </div>
-          <div className="mx-4 hidden sm:block">
+          </div>{" "}
+          <div className="mx-4 hidden sm:block cursor-pointer">
             <a onClick={() => scrollToSection("Education")}>
               {t("section.education").toUpperCase()}
             </a>
           </div>
-          <div className="mx-4 hidden sm:block">
-            <a onClick={() => scrollToSection("Experience")}>
+          <div className="mx-4 hidden sm:block cursor-pointer">
+            <a onClick={() => scrollToSection("Skill")}>
+              {t("section.skill").toUpperCase()}
+            </a>
+          </div>
+          <div className="mx-4 hidden sm:block cursor-pointer">
+            <a onClick={() => scrollToSection("Project")}>
               {t("section.project").toUpperCase()}
             </a>
           </div>
@@ -137,21 +137,12 @@ function Navbar() {
         <a
           className="p-4 hover:bg-gray-200 duration-300"
           onClick={(e) => {
-            scrollToSection("Skill");
-            clickMenu(e);
-          }}
-        >
-          {t("section.skill").toUpperCase()}
-        </a>
-        <a
-          className="p-4 hover:bg-gray-200 duration-300"
-          onClick={(e) => {
             scrollToSection("Experience");
             clickMenu(e);
           }}
         >
           {t("section.experience").toUpperCase()}
-        </a>
+        </a>{" "}
         <a
           className="p-4 hover:bg-gray-200 duration-300"
           onClick={(e) => {
@@ -161,7 +152,22 @@ function Navbar() {
         >
           {t("section.education").toUpperCase()}
         </a>
-        <a className="p-4 hover:bg-gray-200 duration-300" onClick={clickMenu}>
+        <a
+          className="p-4 hover:bg-gray-200 duration-300"
+          onClick={(e) => {
+            scrollToSection("Skill");
+            clickMenu(e);
+          }}
+        >
+          {t("section.skill").toUpperCase()}
+        </a>
+        <a
+          className="p-4 hover:bg-gray-200 duration-300"
+          onClick={(e) => {
+            scrollToSection("Project");
+            clickMenu(e);
+          }}
+        >
           {t("section.project").toUpperCase()}
         </a>
       </div>

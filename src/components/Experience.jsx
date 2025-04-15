@@ -29,7 +29,7 @@ function Experience() {
               <li key={item.id} className="group relative pl-7 pb-8 last:pb-0">
                 <div className="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-black/10 group-first:top-2 duration-500"></div>
                 <div className="absolute left-0 top-2 h-2 w-2 rounded-full bg-[#7284a1] group-hover:bg-teal-800"></div>
-                <div>
+                <div className="text-[16px]/8 font-thin">
                   <h3 className="text-gray-500 font-thin text-sm mb-2 group-hover:text-shadow-sm duration-200 bg-stone-200 px-3 py-1 rounded-md w-fit relative before:absolute before:size-[9px] before:bg-stone-200 before:top-[10px] before:-left-[4px] before:rotate-[-45deg] before:skew-x-12 before:skew-y-8">
                     {item.startDate} - {item.endDate}
                   </h3>
