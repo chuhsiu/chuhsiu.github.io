@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import { I18nProvider } from "./store/i18nContext";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Education />
       <Skills />
       <Projects />
+      <Footer />
     </I18nProvider>
   );
 }
