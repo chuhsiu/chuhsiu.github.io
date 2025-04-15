@@ -10,7 +10,7 @@ function Dialog({ detail, open, closeDialog }) {
     <>
       <div
         className={
-          open ? "z-5 fixed top-0 left-0 size-full bg-black/5" : "hidden"
+          open ? "z-5 fixed top-0 left-0 size-full bg-black/50" : "hidden"
         }
       >
         <div className="relative bg-white w-3/5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg rounded-[20px] overflow-hidden">
@@ -24,10 +24,10 @@ function Dialog({ detail, open, closeDialog }) {
             <p>Loading...</p>
           ) : (
             <>
-              <h2 className="w-fit h-[60px] p-4 m-auto">
+              <h2 className="w-fit h-[60px] p-4 m-auto text-[#7284a1] font-bold">
                 {detail.translations[i18n.language]?.name}
               </h2>
-              <div className="text-xs text-xs/4 px-7 pb-5 tracking-[1px]">
+              <div className="text-sm text-sm/6 px-7 pb-5 tracking-[1px] font-thin">
                 <ReactMarkdown>
                   {detail.translations[i18n.language]?.content.join("\n\n")}
                 </ReactMarkdown>
