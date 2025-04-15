@@ -14,7 +14,7 @@ function Dialog({ detail, open, closeDialog }) {
           open ? "z-5 fixed top-0 left-0 size-full bg-black/50" : "hidden"
         }
       >
-        <div className="relative bg-white w-6/7 sm:w-3/5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg rounded-[20px] overflow-hidden">
+        <div className="relative bg-white w-6/7 md:w-3/5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg rounded-[20px] overflow-hidden">
           <a
             className="float-right border-[0.5px] border-gray-300 bg-gray-100 rounded-full size-[35px] relative m-2 hover:bg-gray-300"
             onClick={() => closeDialog()}
