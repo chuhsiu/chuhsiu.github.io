@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import axios from "axios";
 import { useI18n } from "../store/i18nContext";
+import { getLocalizedText } from "../utils/i18nHelper";
 import ReactMarkdown from "react-markdown";
 function Experience() {
   const { t, i18n } = useI18n();
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    if (!i18n.language) return;
     axios
       .get("/data/experience.json")
       .then((res) => {
@@ -35,12 +37,16 @@ function Experience() {
                   </h3>
                   <h2 className="font-thin tracking-[0.5px] mb-2 group-hover:text-shadow-sm duration-200">
                     <span className="font-semibold tracking-[1px] text-xl group-hover:text-teal-800/70 duration-200">
-                      {item.translations[i18n.language]?.title}
+                      {getLocalizedText(item.translations, i18n.language).title}
                     </span>{" "}
-                    / {item.translations[i18n.language]?.company}
+                    /{" "}
+                    {getLocalizedText(item.translations, i18n.language).company}
                   </h2>
                   <ReactMarkdown>
-                    {item.translations[i18n.language]?.content.join("\n\n")}
+                    {getLocalizedText(
+                      item.translations,
+                      i18n.language
+                    ).content.join("\n\n")}
                   </ReactMarkdown>
                   {/* <span className="group-hover:text-sky-500 duration-300">
                       開發公司形象網站

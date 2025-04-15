@@ -5,7 +5,7 @@ import { GrMoreVertical } from "react-icons/gr";
 import SectionTitle from "./SectionTitle";
 import axios from "axios";
 import { useI18n } from "../store/i18nContext";
-
+import { getLocalizedText } from "../utils/i18nHelper";
 import ReactMarkdown from "react-markdown";
 import Dialog from "./Dialog";
 function Projects() {
@@ -53,11 +53,14 @@ function Projects() {
                       src={item.image}
                     ></img>
                     <h2 className="relative w-fit h-[60px] p-4 m-auto text-[#7284a1] group-hover:font-bold duration-200">
-                      {item.translations[i18n.language]?.name}
+                      {getLocalizedText(item.translations, i18n.language).name}
                     </h2>
                     <div className="text-xs text-sm/5 font-thin px-7 pb-5 tracking-[1px] h-[50px] trancate overflow-hidden line-clamp-3">
                       <ReactMarkdown>
-                        {item.translations[i18n.language]?.content.join("\n\n")}
+                        {getLocalizedText(
+                          item.translations,
+                          i18n.language
+                        ).content.join("\n\n")}
                       </ReactMarkdown>
                     </div>
                     <div className="flex justify-center mt-5">

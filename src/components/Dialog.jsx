@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { TiArrowForwardOutline } from "react-icons/ti";
 
 import { useI18n } from "../store/i18nContext";
+import { getLocalizedText } from "../utils/i18nHelper";
 import ReactMarkdown from "react-markdown";
 function Dialog({ detail, open, closeDialog }) {
   const { i18n } = useI18n();
@@ -25,11 +26,14 @@ function Dialog({ detail, open, closeDialog }) {
           ) : (
             <>
               <h2 className="w-fit h-[60px] p-4 m-auto text-[#7284a1] font-bold">
-                {detail.translations[i18n.language]?.name}
+                {getLocalizedText(detail.translations, i18n.language).name}
               </h2>
               <div className="text-sm text-sm/6 px-7 pb-5 tracking-[1px] font-thin">
                 <ReactMarkdown>
-                  {detail.translations[i18n.language]?.content.join("\n\n")}
+                  {getLocalizedText(
+                    detail.translations,
+                    i18n.language
+                  ).content.join("\n\n")}
                 </ReactMarkdown>
               </div>
               <div className="flex justify-center pb-[20px]">

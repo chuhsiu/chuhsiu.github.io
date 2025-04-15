@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import axios from "axios";
 import { useI18n } from "../store/i18nContext";
-
+import { getLocalizedText } from "../utils/i18nHelper";
 function Skills() {
   const { t, i18n } = useI18n();
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    if (!i18n.language) return;
     axios
       .get("/data/skills.json")
       .then((res) => {
@@ -27,13 +28,13 @@ function Skills() {
           <ul className="mb-[40px] flex flex-wrap">
             {data.map((item) => (
               <li
-                className="w-full sm:w-1/2 lg:w-1/3 mt-5 sm:mx-0 mx-[20px] group relative"
+                className="w-full sm:w-1/2 lg:w-1/4 mt-5 sm:mx-0 mx-[20px] group relative"
                 key={item.id}
               >
                 {/* <div className="pt-[10px] relative mx-8 h-full before:top-[50px] before:left-0 before:w-full before:h-[1px] before:absolute before:bg-[#7284a1]"> */}
                 <div className="pt-[10px] relative mx-8 md:mx-3 h-full rounded-[20px] group-hover:inset-shadow-sm duration-100">
                   <h2 className="relative w-fit h-[60px] p-4 m-auto z-2 border-b-1 border-[#7284a1] group-hover:text-teal-800/70 group-hover:text-lg group-hover:font-semibold group-hover:border-b-3 group-hover:border-teal-800/70 duration-200">
-                    {item.name[i18n.language]}
+                    {getLocalizedText(item.name, i18n.language)}
                   </h2>
                   {item.skills.length === 0 ? (
                     ""

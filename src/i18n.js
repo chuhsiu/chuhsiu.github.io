@@ -10,7 +10,7 @@ i18n.use(I18nextBrowserLanguageDetector).use(initReactI18next).init({
         en: { translation: en},
         zh :{ translation:zh}
     },
-    fallbackLng: "en", // default language
+    fallbackLng: "zh", // default language
     interpolation: {
         escapeValue: false
     }
