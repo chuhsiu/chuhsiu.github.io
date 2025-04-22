@@ -10,9 +10,10 @@
         "name": "Zoey Cheng",
         "title": "Web Developer",
         "intro":[
-            "With over 2 years of experience as a front-end developer, I have a deep understanding of Vue.js and related technologies such as Option API, Vuex, and Vuetify, as well as back-end development experience with ASP.NET MVC and Blazor.",
-            "I have led cross-departmental projects and am capable of independently completing projects and delivering work on time.",
-            "I am passionate about learning new technologies and am currently expanding my knowledge in front-end technologies like React and Node.js, with the goal of becoming a versatile developer with the ability to choose technologies and master tools effectively."
+            "Over 2 years of full-stack development experience, specializing in SPA development using frameworks such as Vue and Blazor.",
+            "Proficient in the .NET Core architecture with hands-on experience in ASP.NET MVC for page rendering and routing control.",
+            "Capable of working independently or collaboratively across departments, consistently delivering projects on time.",
+            "Passionate about learning new technologies — currently diving into React and Node.js — and aspiring to become a versatile developer who masters tools and adapts flexibly."
           ]
     },
     "bachelor" :{
