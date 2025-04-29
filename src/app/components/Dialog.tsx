@@ -2,11 +2,17 @@ import { RxCross1 } from "react-icons/rx";
 import { FaGithub } from "react-icons/fa";
 import { TiArrowForwardOutline } from "react-icons/ti";
 
-import { useI18n } from "../store/i18nContext";
-import { getLocalizedText } from "../utils/i18nHelper";
 import ReactMarkdown from "react-markdown";
-function Dialog({ detail, open, closeDialog }) {
-  const { i18n } = useI18n();
+import { ProjectData } from "@/hooks/useFetchJson";
+
+interface Props {
+  detail: ProjectData | null;
+  open: boolean;
+  closeDialog: () => void;
+  locale: string;
+  }
+
+function Dialog({ detail, open, closeDialog, locale } : Props) {
   return (
     <>
       <div
@@ -21,19 +27,21 @@ function Dialog({ detail, open, closeDialog }) {
           >
             <RxCross1 className="size-[25p] relative top-[9px] left-[9px]" />
           </a>
-          {detail.length === 0 ? (
+          {detail === null ? (
             <p>Loading...</p>
           ) : (
             <>
               <h2 className="w-fit h-[60px] p-4 m-auto text-[#7284a1] font-bold">
-                {getLocalizedText(detail.translations, i18n.language).name}
+                {/* {getLocalizedText(detail.translations, i18n.language).name} */}
+                { detail.translations?.[locale].name }
               </h2>
               <div className="text-sm text-sm/6 px-7 pb-5 tracking-[1px] font-thin">
                 <ReactMarkdown>
-                  {getLocalizedText(
+                  {/* {getLocalizedText(
                     detail.translations,
                     i18n.language
-                  ).content.join("\n\n")}
+                  ).content.join("\n\n")} */}
+                  { detail.translations?.[locale].content.join("\n\n") }
                 </ReactMarkdown>
               </div>
               <div className="flex justify-center pb-[20px]">

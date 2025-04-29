@@ -1,73 +1,81 @@
-import { GrLanguage } from "react-icons/gr";
-import "../assets/nav.css";
-import { useI18n } from "../store/i18nContext";
-import { useEffect } from "react";
+'use client';
 
-function Navbar() {
-  const { t, changeLang } = useI18n();
+// import { GrLanguage } from "react-icons/gr";
+import "@/assets/nav.css";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { Locale, routing, usePathname, useRouter } from "@/i18n/routing";
+import { useParams } from "next/navigation";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { useCloseMenuOnResize } from "@/hooks/useCloseMenuOnResize";
 
-  const toggleMenu = (e) => {
+export default function Navbar() {
+  useCloseMenuOnResize();
+  const t = useTranslations();
+  const locale = useLocale();
+ 
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+
+  const localeLabels: Record<string, string> = {
+    en: 'Eng',
+    zh: '繁中',
+  };
+
+  function onSelectChange(nextLocale: string) {
+    router.replace(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      { locale: nextLocale as Locale }
+    );
+  }
+
+  function toggleMenu (e: { stopPropagation: () => void; target: any; }) {
     e.stopPropagation();
     const button = e.target;
     button.classList.toggle("open");
 
     const menu = document.getElementById("menu");
     button.classList.contains("open")
-      ? menu.classList.add("show")
-      : menu.classList.remove("show");
+      ? menu?.classList.add("show")
+      : menu?.classList.remove("show");
   };
 
-  const clickMenu = (e) => {
+  function clickMenu (e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation();
 
     const menu = document.getElementById("menu");
     const menuBtn = document.getElementById("menu-button");
 
-    if (menu.classList.contains("show")) {
+    if (menu?.classList.contains("show")) {
       menu.classList.remove("show");
     }
-    if (menuBtn.classList.contains("open")) {
+    if (menuBtn?.classList.contains("open")) {
       menuBtn.classList.remove("open");
     }
   };
 
-  const scrollToSection = function (id) {
+  function scrollToSection (id?: string) {
     if (id == null) {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       return;
     }
     const target = document.getElementById(id);
     window.scrollTo({
-      top: target.offsetTop - 70,
+      top: target ? target.offsetTop - 70 : 0,
       left: 0,
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
-
-    const handleResize = (e) => {
-      const menu = document.getElementById("menu");
-      const menuBtn = document.getElementById("menu-button");
-
-      if (e.matches) {
-        if (menu.classList.contains("show")) {
-          menu.classList.remove("show");
-        }
-        if (menuBtn.classList.contains("open")) {
-          menuBtn.classList.remove("open");
-        }
-      }
-    };
-
-    handleResize(mediaQuery);
-    mediaQuery.addEventListener("change", handleResize);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleResize);
-    };
-  }, []);
 
   return (
     <>
@@ -98,17 +106,19 @@ function Navbar() {
               {t("section.project").toUpperCase()}
             </a>
           </div>
-          <div className="text-xs p-2 rounded-md border-[0.5px] ml-5 sm:ml-0">
-            {/* <GrLanguage /> */}
-            <ul className="flex flex-row">
-              <li className="cursor-pointer" onClick={() => changeLang("en")}>
-                En
-              </li>
-              <li className="mx-2">|</li>
-              <li className="cursor-pointer" onClick={() => changeLang("zh")}>
-                中文
-              </li>
-            </ul>
+          <div className="ml-5 sm:ml-0">
+              <Select defaultValue={locale} onValueChange={onSelectChange}>
+                <SelectTrigger>
+                  <SelectValue className="text-xs" />
+                </SelectTrigger>
+                <SelectContent>
+                  {routing.locales.map((cur) => (
+                    <SelectItem className="text-xs" key={cur} value={cur}>
+                      {localeLabels[cur] || cur}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
           </div>
           <button
             id="menu-button"
@@ -174,5 +184,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;

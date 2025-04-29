@@ -1,7 +1,7 @@
-import SectionTitle from "./SectionTitle.jsx";
-import { useI18n } from "../store/i18nContext";
-function Education() {
-  const { t } = useI18n();
+import SectionTitle from "./SectionTitle.tsx";
+import { getTranslations } from "next-intl/server";
+export default async function Education() {
+  const t = await getTranslations();
   return (
     <>
       <div id="Education" className="bg-gray-200">
@@ -44,5 +44,3 @@ function Education() {
     </>
   );
 }
-
-export default Education;
